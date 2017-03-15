@@ -5,11 +5,11 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
- var articles = { 
+ var articles = {
     'article-one':{
-        title:`Article One | sawan kumar`,
-        heading:`Article One`,
-        date:`24/09/1996`,
+        title:'Article One | sawan kumar',
+        heading:'Article One',
+        date:'24/09/1996',
         content:`
         <p>
         Hi, This is my first article
@@ -19,8 +19,18 @@ app.use(morgan('combined'));
         </p>
         <p>
         Hi, This is my first article
-        </p>
-    }
+        </p>`
+        },
+    'article-two':{
+        title:'Article Two | sawan kumar',
+        heading:'Article One',
+        date:'25/09/1996',
+        content:`
+        <p>
+            Hi, This is my second article
+        </p>`}
+
+    
 };
 function createTemplate(data){
     var title=data.title;
@@ -73,7 +83,6 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
