@@ -1,10 +1,20 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;
+
+var config = {
+  host: 'db.imad.hasura-app.io',
+  user: 'deathstark',
+  password: process.env.DB_PASSWORD,
+  port: '5432' ,
+  database: 'deathstark',
+};
 
 var app = express();
 app.use(morgan('combined'));
 
+var pool = new Pool(config);
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
