@@ -1,13 +1,13 @@
 function validation(){
-    var enrol  = document.getElementById("EnrolNo");
+    var username  = document.getElementById("username");
     var password  = document.getElementById("Password");
 
     var check = true;
     
-    enrol.classList.remove("invalid");
+    username.classList.remove("invalid");
     password.classList.remove("invalid");
     
-    if(enrol.value === ""){
+    if(username.value === ""){
         enrol.classList.add("invalid");
         check = false;
     }
