@@ -12,7 +12,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/CSS/welcomePage.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'welcomePage.css'));
+  res.sendFile(path.join(__dirname, 'CSS', 'welcomePage.css'));
 });
 
 
