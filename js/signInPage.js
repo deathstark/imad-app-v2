@@ -8,6 +8,7 @@ function validation(){
     password.classList.remove("invalid");
     
     if(username.value === ""){
+        alert("Enter username");
         Username.classList.add("invalid");
         check = false;
     }
