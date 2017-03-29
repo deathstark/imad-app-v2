@@ -46,14 +46,14 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'signUpPage.css'));
 });
 
-app.post('/Html/signup.html',function (req,res){
-    var Username = req.query.Username;
-    var Email = req.query.Email;
-    var Password = req.query.Password;
-    var Fname = req.query.Fname;
-    var Mname = req.query.Mname;
-    var Lname = req.query.Lname;
-    var Dob = req.query.Dob;
+app.post('/signup',function (req,res){
+    var Username = req.body.Username;
+    var Email = req.body.Email;
+    var Password = req.body.Password;
+    var Fname = req.body.Fname;
+    var Mname = req.body.Mname;
+    var Lname = req.body.Lname;
+    var Dob = req.body.Dob;
 
      pool.query('INSERT INTO "signup" ("Username", "Email", "Password","Fname","Mname","Lname","Dob") VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
         if(err){
