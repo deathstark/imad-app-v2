@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
+var bodyParser = require('body-parser');
 
 var config = {
   host: 'db.imad.hasura-app.io',
@@ -45,6 +46,25 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'signUpPage.css'));
 });
 
+app.get('/Html/signup.html',function (req,res){
+    var Username = req.query.Username;
+    var Email = req.query.Email;
+    var Password = req.query.Password;
+    var Fname = req.query.Fname;
+    var Mname = req.query.Mname;
+    var Lname = req.query.Lname;
+    var Dob = req.query.Dob;
+
+     pool.query('INSERT INTO "signup" ("Username", "Email", "Password","Fname","Mname","Lname","Dob") VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
+        if(err){
+            console.log("fail");
+        }
+        else{
+            res.send(`success`);
+        }
+    });
+    
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
