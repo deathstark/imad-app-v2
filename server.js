@@ -9,7 +9,7 @@ var config = {
   user: 'deathstark',
   password: process.env.DB_PASSWORD,
   port: '5432' ,
-  database: 'deathstark',
+  database: 'deathstark'
 };
 
 var app = express();
@@ -46,7 +46,7 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'signUpPage.css'));
 });
 
-app.get('/Html/signup.html',function (req,res){
+app.post('/Html/signup.html',function (req,res){
     var Username = req.query.Username;
     var Email = req.query.Email;
     var Password = req.query.Password;
