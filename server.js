@@ -59,16 +59,16 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'signUpPage.css'));
  });
  
-  app.get('/',function (req,res){
-    var Username = req.body.Username;
+  app.get('/test-db1',function (req,res){
+  /*  var Username = req.body.Username;
     var Email = req.body.Email;
     var Password = req.body.Password;
     var Fname = req.body.Fname;
     var Mname = req.body.Mname;
     var Lname = req.body.Lname;
     var Dob = req.body.Dob;
-
-     pool.query('INSERT INTO signup (Username,Email,Password,Fname,Mname,Lname,Dob) VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
+*/
+     pool.query('INSERT INTO signup (Username,Email,Password,Fname,Mname,Lname,Dob) VALUES ("steyn","abc@abc.com","123456","sawan","k","c","24/09/1996")',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
         if(err){
             console.log("fail");
         }
