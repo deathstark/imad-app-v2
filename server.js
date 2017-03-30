@@ -59,7 +59,7 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'signUpPage.css'));
  });
  
-  app.post('/',function (req,res){
+  app.get('/',function (req,res){
     var Username = req.body.Username;
     var Email = req.body.Email;
     var Password = req.body.Password;
