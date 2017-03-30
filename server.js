@@ -60,15 +60,15 @@ app.get('/CSS/signUpPage.css', function (req, res) {
  });
  
   app.get('/',function (req,res){
-    var Username = req.body.Username;
-    var Email = req.body.Email;
-    var Password = req.body.Password;
-    var Fname = req.body.Fname;
-    var Mname = req.body.Mname;
-    var Lname = req.body.Lname;
-    var Dob = req.body.Dob;
+    var Username = req.query.Username;
+    var Email = req.query.Email;
+    var Password = req.query.Password;
+    var Fname = req.query.Fname;
+    var Mname = req.query.Mname;
+    var Lname = req.query.Lname;
+    var Dob = req.query.Dob;
 
-     pool.query('INSERT INTO signup (Username,Email,Password,Fname,Mname,Lname,Dob) VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
+     pool.query('INSERT INTO "signup" ("Username","Email","Password","Fname","Mname","Lname","Dob") VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
         if(err){
             console.log("fail");
         }
