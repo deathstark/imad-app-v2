@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var config = {
   host: 'db.imad.hasura-app.io',
   user: 'deathstark',
-  password: process.env.DB_PASSWORD,
+  password: 'db-deathstark-12849',
   port: '5432' ,
   database: 'deathstark'
 };
