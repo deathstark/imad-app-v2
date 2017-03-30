@@ -68,7 +68,7 @@ app.get('/CSS/signUpPage.css', function (req, res) {
     var Lname = req.body.Lname;
     var Dob = req.body.Dob;
 
-     pool.query('INSERT INTO signup ("Username", "Email", "Password","Fname","Mname","Lname","Dob") VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
+     pool.query('INSERT INTO signup (Username,Email,Password,Fname,Mname,Lname,Dob) VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
         if(err){
             console.log("fail");
         }
