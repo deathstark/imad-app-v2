@@ -51,7 +51,7 @@ app.get('/CSS/sign.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'sign.css'));
 });
 
-app.get('/Html/Sign.html', function (req, res) {
+app.get('/Html/sign.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'Html', 'Sign.html'));
 });
 
