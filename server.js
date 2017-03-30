@@ -46,7 +46,7 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'signUpPage.css'));
 });
 
-app.query('/Html/signup.html',function (req,res){
+app.post('/',function (req,res){
     var Username = req.body.Username;
     var Email = req.body.Email;
     var Password = req.body.Password;
