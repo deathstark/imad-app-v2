@@ -140,7 +140,7 @@ signup.onclick = function () {
                 }  
             };
         
-            request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/user', true);
+            request.open('POST', 'http://deathstark.imad.hasura-app.io/signup/user', true);
             request.setRequestHeader('Content-Type', 'application/json');
             request.send(JSON.stringify({fname: fname,lname: lname,email: email, password: password}));  
             signup.value = 'Registering...';
@@ -161,7 +161,7 @@ function updateUser(fname,lname,email,password){
       }  
     };
     
-    request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signup/updateuser', true);
+    request.open('POST', 'http://deathstark.imad.hasura-app.io/signup/updateuser', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({fname: fname,lname: lname,email: email, password: password}));
     request.send(null);
@@ -178,7 +178,7 @@ signin.onclick = function () {
               // Take some action
               if (request.status === 200) {
                   signin.value = 'Sucess!';
-                   window.location.assign("http://handsomecoder.imad.hasura-app.io/");
+                   window.location.assign("http://deathstark.imad.hasura-app.io/blog");
               } else if (request.status === 403) {
                   signin.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
@@ -195,7 +195,7 @@ signin.onclick = function () {
         // Make the request
         var email = document.getElementById('emailin').value;
         var password = document.getElementById('passwordin').value;
-        request.open('POST', 'http://handsomecoder.imad.hasura-app.io/signin/check', true);
+        request.open('POST', 'http://deathstark.imad.hasura-app.io/signin/check', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({email: email,password: password}));  
         signin.value = 'Logging in...';
