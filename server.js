@@ -77,11 +77,11 @@ app.get('/CSS/signUpPage.css', function (req, res) {
  
   app.post('/signup/user',function (req,res){
    // var Username = req.query.Username;
-    var email = req.query.Email;
-    var password = req.query.Password;
-    var fname = req.query.Fname;
+    var email = req.body.email;
+    var password = req.body.password;
+    var fname = req.body.fname;
     //var Mname = req.query.Mname;
-    var lname = req.query.Lname;
+    var lname = req.body.lname;
     //var Dob = req.query.Dob;
 
      pool.query('INSERT INTO "signup" ("Email","Password","Fname","Lname") VALUES ($1,$2,$3,$4)',[email,password,fname,lname],function(err,rows){
