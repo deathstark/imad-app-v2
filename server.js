@@ -71,6 +71,9 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'CSS', 'sit.css'));
  });
  
+ app.get('/js/sign.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'js', 'sign.js'));
+ });
  
   app.get('/',function (req,res){
     var Username = req.query.Username;
