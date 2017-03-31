@@ -120,7 +120,7 @@ signup.onclick = function () {
             if (request.readyState === XMLHttpRequest.DONE) {
                 if (request.status === 200) {
                       signup.value = 'Sucess!';
-                      window.location.assign("http://handsomecoder.imad.hasura-app.io/blog");
+                      window.location.assign("http://deathstark.imad.hasura-app.io/");
                 } else if (request.status === 403) {
                       signup.value = 'Submit';
                       var c = confirm("User already Registered\n If you have forget password click on \"OK\" else \"Cancel\"");
@@ -178,7 +178,7 @@ signin.onclick = function () {
               // Take some action
               if (request.status === 200) {
                   signin.value = 'Sucess!';
-                   window.location.assign("http://handsomecoder.imad.hasura-app.io/blog");
+                   window.location.assign("http://handsomecoder.imad.hasura-app.io/");
               } else if (request.status === 403) {
                   signin.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
