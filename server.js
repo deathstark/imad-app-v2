@@ -75,16 +75,16 @@ app.get('/CSS/signUpPage.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'js', 'sign.js'));
  });
  
-  app.get('/',function (req,res){
-    var Username = req.query.Username;
-    var Email = req.query.Email;
-    var Password = req.query.Password;
-    var Fname = req.query.Fname;
-    var Mname = req.query.Mname;
-    var Lname = req.query.Lname;
-    var Dob = req.query.Dob;
+  app.post('/signup/user',function (req,res){
+   // var Username = req.query.Username;
+    var email = req.query.Email;
+    var password = req.query.Password;
+    var fname = req.query.Fname;
+    //var Mname = req.query.Mname;
+    var lname = req.query.Lname;
+    //var Dob = req.query.Dob;
 
-     pool.query('INSERT INTO "signup" ("Username","Email","Password","Fname","Mname","Lname","Dob") VALUES ($1,$2,$3,$4,$5,$6,$7)',[Username,Email,Password,Fname,Mname,Lname,Dob],function(err,rows){
+     pool.query('INSERT INTO "signup" ("Email","Password","Fname","Lname") VALUES ($1,$2,$3,$4)',[email,password,fname,lname],function(err,rows){
         if(err){
             console.log("fail");
         }
