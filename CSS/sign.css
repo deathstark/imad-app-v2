@@ -1,0 +1,34 @@
+#bodySection{
+    display: flex;
+}
+
+
+section{
+    margin-top: 90px;
+    width: 50%;
+}
+
+#signup{
+    border-right: 1px #000000 solid;
+}
+
+#signin{
+    border-left: 1px #000000 solid;
+}
+
+table td:first-child{
+    text-align: right;
+}
+
+thead th{
+    padding: 20px;
+}
+
+input[type=reset]{
+    margin-left: 2px;
+    border: transparent;
+}
+
+#resetin:hover,#resetup:hover{
+    cursor: pointer;
+}
