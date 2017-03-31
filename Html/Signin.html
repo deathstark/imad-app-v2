@@ -1,52 +1,138 @@
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Sign In Page</title>
-  <link rel="stylesheet" href="../CSS/signInPage.css">
-  <link rel="stylesheet" href="../CSS/site.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Sign Page</title>
+        <link rel="stylesheet" href="/css/site.css"/>
+        <link rel="stylesheet" href="sign.css"/>
 
-</head>
-<body>
-<center>
-    <form name="signInForm" id="signInForm"  method="get">
-    <table >
-      <thead>
-        <tr>
-          <th colspan="2">Sign In</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td> 
-            <label for="Username">Username :</label> 
-          </td>
-          <td> 
-            <input type="text" id="Username" name="Username" placeholder="steyn"> 
-          </td>
-        </tr>
-        <tr>
-          <td> 
-            <label for="password">Password :</label> 
-          </td>
-          <td> 
-               <input type="password" id="password" name="password" placeholder="password">
-          </td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td> 
-            <input type="reset"> 
-          </td>
-          <td> 
-            <input type="submit" value="Sign In"> 
-          </td>
-        </tr>
-      </tfoot>
-    </table>
-  </form>
-</center>
-  
-</body>
+    </head>
+    <body>
+        <nav>
+            <a href="profile">
+                <div id="backButton" class="operationalButton">
+                    Profile Page
+                </div>
+            </a>
+            <div id="pageTitle">
+                Sign Up / Log In <span class="font-size-2">to write comment</span>
+            </div>
+            <a href="../../blog">
+                <div id="pageButton" class="operationalButton">
+                    Blog Page
+                </div>
+            </a>
+        </nav>
+        <div id="bodySection">
+        <section id="signup">
+            <center>
+                <table cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="font-size-2"> Sign Up Form </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <label for="fname"> Firstname: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="fname" name="fname" placeholder="Harsh">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fname"> Lastname: </label>
+                            </td>
+                            <td>
+                                <input type="text" id="lname" name="lname" placeholder="Shah">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email"> Email ID: </label>
+                            </td>
+                            <td>
+                                <input type="email" id="emailup" name="email" placeholder="harshshah1295@gmail.com">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password"> Password: </label>
+                            </td>
+                            <td>
+                                <input type="password" id="passwordup" name="password" placeholder="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="Cpassword"> Confirm Password: </label>
+                            </td>
+                            <td>
+                                <input type="password" id="cpassword" name="cpassword" placeholder="confirm password">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+                                <input type="submit" id="signupBtn">
+                                <input type="reset" id="resetup" value="Reset">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p class="font-size-4"><i><b> All Fields are mandatory </b></i></p>
+            </center>
+        </section>
+        <section id="signin">
+            <center>
+                <table cellpadding="5" >
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="font-size-2">Log In</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 
+                                <label for="email">Email ID:</label> 
+                            </td>
+                            <td> 
+                                <input type="text" id="emailin" name="email" placeholder="harshshah1295@gmail.com"> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> 
+                                <label for="password">Password:</label> 
+                            </td>
+                            <td> 
+                                <input type="password" id="passwordin" name="password" placeholder="password">
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td> 
+
+                            </td>
+                            <td>
+                                <input type="submit" id="signinBtn"> 
+                                <input type="reset" id="resetin" value="Reset"> 
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p class="font-size-4"><b><i>In case you forget password refill the form<br>
+                            to override the password</i></b></p>
+            </center>
+        </section>
+        </div>
+        <script type="text/javascript" src="/js/sign.js"></script>
+    </body>
 </html>
